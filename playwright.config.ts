@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as dotenv from 'dotenv';
 
 // Load the correct .env file based on the ENV variable
-const env = process.env.ENV || 'dev'; // Default to 'dev' if ENV is not provided
+const env = process.env.ENV || 'preprod'; // Default to 'dev' if ENV is not provided
 const envFilePath = `.env.${env}`;
 
 if (!fs.existsSync(envFilePath)) {
@@ -16,10 +16,10 @@ export default defineConfig({
   fullyParallel: true, // Allow parallel execution for better test speed
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0, // Increase retries in CI to handle flaky tests
-  timeout: 120000, // 120 seconds global timeout
+  timeout: 90000, // 60 seconds global timeout
 
   expect: {
-    timeout: 5000, // Default timeout for `expect` statements
+    timeout: 10000, // Default timeout for `expect` statements
   },
 
   /* Reporter to use */

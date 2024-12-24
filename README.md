@@ -91,8 +91,8 @@ playwright.config.ts
 3. **Set up environment variables**:
     - Create `.env.local`, `.env.dev`, and `.env.production` files based on the template:
       ```env
-      AUTO_CONTRACT_TYPE_USER_EMAIL=user@example.com
-      AUTO_CONTRACT_TYPE_USER_PASSWORD=secure-password
+      AUTO_DEALER_EMAIL=user@example.com
+      AUTO_DEALER_PWD=secure-password
       BASE_URL=https://your-base-url.com
       API_BASE_URL=https://your-api-url.com
       ORGANIZATION_ID=12345
@@ -146,8 +146,8 @@ Environment variables are dynamically loaded using [dotenv](https://www.npmjs.co
 
 Example `.env`:
 ```env
-AUTO_CONTRACT_TYPE_USER_EMAIL=user@example.com
-AUTO_CONTRACT_TYPE_USER_PASSWORD=secure-password
+AUTO_DEALER_EMAIL=user@example.com
+AUTO_DEALER_PWD=secure-password
 BASE_URL=https://demo.example.com
 API_BASE_URL=https://api.demo.example.com
 ORGANIZATION_ID=12345

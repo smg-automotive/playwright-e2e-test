@@ -17,9 +17,6 @@ export const test = baseTest.extend<{
     uiClient: UIClient;
     token: string;
     titleName: string;
-    contractTypeName: string;
-    contractNameVer1: string;
-    contractNameVer2: string;
 }>({
     token: async ({ request }, use) => {
         console.log('Getting token...');

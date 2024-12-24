@@ -1,15 +1,35 @@
 import {testAPI as baseTest} from '../api/api.fixture';
-import LoginScreen from "../../actions/uiActions/loginPage";
-import SamplePage from '../../actions/uiActions/samplePage'
+import HomePage from "../../actions/pageObjects/homePage";
+import SearchResultPage from "../../actions/pageObjects/searchResultPage";
+import ProductDetailPage from "../../actions/pageObjects/productDetailPage";
+import MessageLeadPage from "../../actions/pageObjects/messageLeadPage";
+import LoginPage from "../../actions/pageObjects/loginPage";
+import InsertionPage from "../../actions/pageObjects/insertionPage";
 
 export const testUI = baseTest.extend<{
-    loginScreen: LoginScreen;
-    samplePage: SamplePage;
+    homePage: HomePage;
+    searchResultPage: SearchResultPage;
+    productDetailPage: ProductDetailPage;
+    messageLeadPage: MessageLeadPage;
+    loginPage: LoginPage;
+    insertionPage: InsertionPage;
 }>({
-    loginScreen: async ({page}, use) => {
-        await use(new LoginScreen(page));
+    homePage: async ({page}, use) => {
+        await use(new HomePage(page));
     },
-    samplePage: async ({page}, use) => {
-        await use(new SamplePage(page));
-    }
+    searchResultPage: async ({page}, use) => {
+        await use(new SearchResultPage(page));
+    },
+    productDetailPage: async ({page}, use) => {
+        await use(new ProductDetailPage(page));
+    },
+    messageLeadPage: async ({page}, use) => {
+        await use(new MessageLeadPage(page));
+    },
+    loginPage: async ({page}, use) => {
+        await use(new LoginPage(page));
+    },
+    insertionPage: async ({page}, use) => {
+        await use(new InsertionPage(page));
+    },
 });

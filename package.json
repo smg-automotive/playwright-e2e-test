@@ -2,7 +2,7 @@
   "name": "playwright_automation",
   "version": "1.0.0",
   "scripts": {
-    "debug": "ENV=dev npx playwright test --grep @tag --ui",
+    "debug": "ENV=preprod npx playwright test --grep @Dealer --ui",
     "test:local": "ENV=local npx playwright test --grep @tag",
     "test:dev": "ENV=dev npx playwright test --grep @tag"
   },
